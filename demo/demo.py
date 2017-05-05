@@ -1,6 +1,11 @@
 from __future__ import division
 from __future__ import print_function
 
+import sys
+
+sys.path.append(".")
+
+import matplotlib.pyplot as plt
 import prettytensor as pt
 import tensorflow as tf
 import numpy as np
@@ -11,6 +16,7 @@ import torchfile
 from PIL import Image, ImageDraw, ImageFont
 import re
 
+import misc.config
 from misc.config import cfg, cfg_from_file
 from misc.utils import mkdir_p
 from stageII.model import CondGAN
@@ -69,7 +75,8 @@ def build_model(sess, embedding_dim, batch_size):
     ckt_path = cfg.TEST.PRETRAINED_MODEL
     if ckt_path.find('.ckpt') != -1:
         print("Reading model parameters from %s" % ckt_path)
-        saver = tf.train.Saver(tf.all_variables())
+        #ckt_path = "models/birds_skip_thought_model_164000.ckpt"
+        saver = tf.train.Saver(tf.global_variables())
         saver.restore(sess, ckt_path)
     else:
         print("Input a valid model path.")
@@ -80,6 +87,7 @@ def drawCaption(img, caption):
     img_txt = Image.fromarray(img)
     # get a font
     fnt = ImageFont.truetype('Pillow/Tests/fonts/FreeMono.ttf', 50)
+    #fnt = ImageFont.truetype('FreeMono.ttf', 50)
     # get a drawing context
     d = ImageDraw.Draw(img_txt)
 
@@ -124,6 +132,13 @@ def save_super_images(sample_batchs, hr_sample_batchs,
             hr_img = hr_sample_batchs[i][j]
             hr_img = (hr_img + 1.0) * 127.5
             re_sample = scipy.misc.imresize(lr_img, hr_img.shape[:2])
+            img_re_sample = Image.fromarray(re_sample)
+            img_re_sample.save('%s/sentence_%d_%d.jpg' % (save_dir, startID + j, i))
+            hr_re_sample = scipy.misc.imresize(hr_img, hr_img.shape[:2])
+            img_hr_sample = Image.fromarray(hr_re_sample)
+            img_hr_sample.save('%s/sentence_%d_%d.jpg' % (save_dir, startID + j, i+8))
+
+            
             row1.append(re_sample)
             row2.append(hr_img)
         row1 = np.concatenate(row1, axis=1)
@@ -132,6 +147,7 @@ def save_super_images(sample_batchs, hr_sample_batchs,
 
         # Second 8 samples with up to 8 samples
         if len(sample_batchs) > 8:
+            print("*********in there??????")
             row1 = [padding]
             row2 = [padding]
             for i in range(8, len(sample_batchs)):
@@ -139,6 +155,8 @@ def save_super_images(sample_batchs, hr_sample_batchs,
                 hr_img = hr_sample_batchs[i][j]
                 hr_img = (hr_img + 1.0) * 127.5
                 re_sample = scipy.misc.imresize(lr_img, hr_img.shape[:2])
+                img_re_sample = Image.fromarray(re_sample)
+                img_re_sample.save('%s/sentence_%d_%d.jpg' % (save_dir, startID + j, i+8))
                 row1.append(re_sample)
                 row2.append(hr_img)
             row1 = np.concatenate(row1, axis=1)
@@ -157,7 +175,7 @@ def save_super_images(sample_batchs, hr_sample_batchs,
             np.concatenate([top_padding, superimage], axis=0)
 
         fullpath = '%s/sentence%d.jpg' % (save_dir, startID + j)
-        superimage = drawCaption(np.uint8(superimage), captions_batch[j])
+        #superimage = drawCaption(np.uint8(superimage), captions_batch[j])
         scipy.misc.imsave(fullpath, superimage)
 
 
@@ -183,16 +201,19 @@ if __name__ == "__main__":
     save_dir = cap_path[:cap_path.find('.t7')]
     if num_embeddings > 0:
         batch_size = np.minimum(num_embeddings, cfg.TEST.BATCH_SIZE)
-
+        print("test01")
         # Build StackGAN and load the model
         config = tf.ConfigProto(allow_soft_placement=True)
         with tf.Session(config=config) as sess:
-            with tf.device("/gpu:%d" % cfg.GPU_ID):
+            print("test02")
+            with tf.device("/cpu:0"):
                 embeddings_holder, fake_images_opt, hr_fake_images_opt =\
                     build_model(sess, embeddings.shape[-1], batch_size)
 
+                print("test03")
                 count = 0
                 while count < num_embeddings:
+                    print("test04")
                     iend = count + batch_size
                     if iend > num_embeddings:
                         iend = num_embeddings
