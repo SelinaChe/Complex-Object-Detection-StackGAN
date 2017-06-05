@@ -1,0 +1,1 @@
+gan_flowers/sentence_4_8.jpg 0

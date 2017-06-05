@@ -1,0 +1,13 @@
+/root/selectivesearch/example/region/flower_1_3/3_468_246_131_132.jpg 3
+/root/selectivesearch/example/region/flower_1_3/5_472_246_127_132.jpg 5
+/root/selectivesearch/example/region/flower_1_3/6_58_54_541_277.jpg 6
+/root/selectivesearch/example/region/flower_1_3/7_0_0_599_304.jpg 7
+/root/selectivesearch/example/region/flower_1_3/1_58_54_541_276.jpg 1
+/root/selectivesearch/example/region/flower_1_3/10_447_55_152_271.jpg 10
+/root/selectivesearch/example/region/flower_1_3/2_446_54_153_164.jpg 2
+/root/selectivesearch/example/region/flower_1_3/9_437_54_162_166.jpg 9
+/root/selectivesearch/example/region/flower_1_3/4_437_54_162_272.jpg 4
+/root/selectivesearch/example/region/flower_1_3/0_0_0_599_354.jpg 0
+/root/selectivesearch/example/region/flower_1_3/12_424_63_164_291.jpg 12
+/root/selectivesearch/example/region/flower_1_3/8_0_54_599_324.jpg 8
+/root/selectivesearch/example/region/flower_1_3/11_0_0_599_378.jpg 11

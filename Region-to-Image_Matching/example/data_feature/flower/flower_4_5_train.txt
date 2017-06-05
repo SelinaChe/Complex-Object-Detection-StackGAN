@@ -1,0 +1,2 @@
+/root/selectivesearch/example/region/flower_4_5/0_0_0_399_274.jpg 0
+/root/selectivesearch/example/region/flower_4_5/1_74_0_75_48.jpg 1
