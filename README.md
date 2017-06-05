@@ -1,7 +1,7 @@
 # StackGAN
 Framework:
 
-<img src="overview/overview.png" width="700px" height="370px"/>
+<div align="center"><img src="overview/overview.png" width="700px" height="370px"/></div>
 
 
 ### Dependencies
@@ -49,7 +49,7 @@ Examples for Region-to-Image Matching for birds conditioned by "This bird is com
 ![](overview/bird_2.png) 
 
 Examples on a Parrot Robot in real environment:
-![](overview/robots.png) 
+<div align="center"><img src="overview/robots.png" width="700px" height="370px"/></div>
 
 **References**
 
