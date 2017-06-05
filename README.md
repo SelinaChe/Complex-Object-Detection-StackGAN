@@ -1,5 +1,6 @@
 # StackGAN
 Framework:
+
 <img src="overview/overview.png" width="700px" height="370px"/>
 
 
@@ -34,19 +35,21 @@ Follow the "Data" process of [StackGAN](https://github.com/SelinaChe/Complex-Obj
 - [StackGAN for birds](https://drive.google.com/open?id=0B3y_msrWZaXLNUNKa3BaRjAyTzQ) trained from char-CNN-RNN text embeddings. Download and save it to `models/`.
 - [StackGAN for flowers](https://drive.google.com/open?id=0B3y_msrWZaXLX01FMC1JQW9vaFk) trained from char-CNN-RNN text embeddings. Download and save it to `models/`.
 - [StackGAN for birds](https://drive.google.com/open?id=0B3y_msrWZaXLZVNRNFg4d055Q1E) trained from skip-thought text embeddings. Download and save it to `models/` (Just used the same setting as the char-CNN-RNN. We assume better results can be achieved by playing with the hyper-parameters).
-- [Image Matching model for Cifar100]( ) (Just download and put it to the the "models" folder)
+- [Image Matching model for Cifar100]( ). Download and save it to `models/`.
 
 
 **Run Demos for Bird**
 - Run `sh demo/birds_demo.sh` to generate bird samples from sentences. The results will be saved to `Data/birds/example_captions/`.(Need to [download](https://drive.google.com/file/d/0B0ywwgffWnLLU0F3UHA3NzFTNEE/view) the char-CNN-RNN text encoder for birds to `models/text_encoder/`. Note: this text encoder is provided by [reedscot/icml2016](https://github.com/reedscot/icml2016)).
 - Run `sh example_birds.sh` in folder "Region-to-Image_Matching/example". The result images will be stored in folder "match_images"
 
-
-Examples for birds (char-CNN-RNN embeddings), more on [youtube](https://youtu.be/93yaf_kE0Fg):
+Examples for Region-to-Image Matching for birds conditioned by "A small yellow bird with a black crown and a short black pointed beak":
 ![](overview/bird_1.png) 
 
-Examples for flowers (char-CNN-RNN embeddings), more on [youtube](https://youtu.be/SuRyL5vhCIM):
+Examples for Region-to-Image Matching for birds conditioned by "This bird is completely red with black wings and pointy beak": 
 ![](overview/bird_2.png) 
+
+Examples on a Parrot Robot in real environment:
+![](overview/robots.png) 
 
 **References**
 
