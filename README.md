@@ -1,6 +1,6 @@
 # StackGAN
 Framework:
-<img src="examples/overview.png" width="700px" height="370px"/>
+<img src="overview/overview.png" width="700px" height="370px"/>
 
 
 ### Dependencies
@@ -43,15 +43,10 @@ Follow the "Data" process of [StackGAN](https://github.com/SelinaChe/Complex-Obj
 
 
 Examples for birds (char-CNN-RNN embeddings), more on [youtube](https://youtu.be/93yaf_kE0Fg):
-![](match_images/macthed_bird_3_1.jpg) ![](match_images/macthed_bird_3_2.jpg) 
-![](match_images/bird4.jpg) ![](match_images/macthed_bird_5_8.jpg)
-
+![](overview/bird_1.png) 
 
 Examples for flowers (char-CNN-RNN embeddings), more on [youtube](https://youtu.be/SuRyL5vhCIM):
-![](match_images/macthed_flower_1_1.jpg) ![](match_images/macthed_flower_1_11.jpg) 
-![](match_images/macthed_flower_4_10.jpg) ![](match_images/macthed_flower_4_17.jpg)
-
-
+![](overview/bird_2.png) 
 
 **References**
 
