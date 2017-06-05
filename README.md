@@ -2,7 +2,7 @@
 Code for reproducing main results in the paper [StackGAN: Text to Photo-realistic Image Synthesis
 with Stacked Generative Adversarial Networks](https://arxiv.org/pdf/1612.03242v1.pdf) by Han Zhang, Tao Xu, Hongsheng Li, Shaoting Zhang, Xiaolei Huang, Xiaogang Wang, Dimitris Metaxas.
 
-<img src="examples/framework.png" width="700px" height="370px"/>
+<img src="examples/overview.png" width="700px" height="370px"/>
 
 
 ### Dependencies
