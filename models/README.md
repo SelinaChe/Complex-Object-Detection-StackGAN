@@ -2,6 +2,7 @@
 - [StackGAN for birds]() trained from char-CNN-RNN text embeddings. Download and save it to `models/`.
 - [StackGAN for flowers](https://drive.google.com/open?id=0B3y_msrWZaXLX01FMC1JQW9vaFk) trained from char-CNN-RNN text embeddings. Download and save it to `models/`.
 - [StackGAN for birds](https://drive.google.com/open?id=0B3y_msrWZaXLZVNRNFg4d055Q1E) trained from skip-thought text embeddings. Download and save it to `models/` (Just use the same setting as the char-CNN-RNN, we assume better results can be achieved by playing with the hyper-parameters).
+- [Image Matching model for Cifar100]( ) (Just download and put it to the the "models" folder)
 
 
 **char-CNN-RNN text encoders**
