@@ -42,11 +42,9 @@ Follow the "Data" process of [StackGAN](https://github.com/SelinaChe/Complex-Obj
 - Run `sh demo/birds_demo.sh` to generate bird samples from sentences. The results will be saved to `Data/birds/example_captions/`.(Need to [download](https://drive.google.com/file/d/0B0ywwgffWnLLU0F3UHA3NzFTNEE/view) the char-CNN-RNN text encoder for birds to `models/text_encoder/`. Note: this text encoder is provided by [reedscot/icml2016](https://github.com/reedscot/icml2016)).
 - Run `sh example_birds.sh` in folder "Region-to-Image_Matching/example". The result images will be stored in folder "match_images"
 
-Examples for Region-to-Image Matching for birds conditioned by "A small yellow bird with a black crown and a short black pointed beak":
-![](overview/bird_1.png) 
+Examples for Region-to-Image Matching for birds conditioned by "A small yellow bird with black wings and a short black pointed beak":
+![](overview/experiment.png) 
 
-Examples for Region-to-Image Matching for birds conditioned by "This bird is completely red with black wings and pointy beak": 
-![](overview/bird_2.png) 
 
 Examples on a Parrot Robot in real environment:
 <div align="center"><img src="overview/robots.png" width="700px" height="406px"/></div>
