@@ -1,4 +1,4 @@
-# StackGAN
+# GAN-based Object Finding for Robotics
 Framework:
 
 <div align="center"><img src="overview/overview.png" width="700px" height="308px"/></div>
